@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "proofcheck",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": "./",
       "description": "Verify completion claims with fresh, scoped evidence without changing the project.",
       "author": { "name": "Asnari Pacalna" },

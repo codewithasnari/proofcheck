@@ -82,6 +82,8 @@ npm run validate
 npm pack --dry-run
 ```
 
+Behavioral evaluations in `evals/evals.json` use disposable Git repositories for passing, failing, unavailable, historical-only, and unsafe verification scenarios.
+
 CI runs the same gates with SHA-pinned GitHub Actions.
 
 ## License

@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { access, readFile, rm } from 'node:fs/promises';
+import { constants } from 'node:fs';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { tmpdir } from 'node:os';
+import { resolve } from 'node:path';
 import test from 'node:test';
 
 const skill = await readFile(new URL('../skills/proofcheck/SKILL.md', import.meta.url), 'utf8');
@@ -29,7 +34,7 @@ test('report contract preserves exact evidence and all four states', () => {
   assert.match(report, /Do not collapse counts or normalize exact result wording/);
 });
 
-test('offline evaluation suite covers five discriminating scenarios', () => {
+test('offline evaluation suite covers five executable scenarios', async () => {
   assert.equal(evals.length, 5);
   assert.deepEqual(evals.map(({ id }) => id), [
     'clean-focused-pass', 'focused-test-failure', 'unavailable-tool', 'historical-evidence', 'unsafe-production-check',
@@ -37,5 +42,14 @@ test('offline evaluation suite covers five discriminating scenarios', () => {
   for (const scenario of evals) {
     assert.ok(scenario.prompt.length > 20);
     assert.ok(scenario.expected.length >= 3);
+    assert.ok(scenario.fixture, `${scenario.id} needs an executable fixture`);
+    const script = new URL(`../${scenario.fixture.script}`, import.meta.url);
+    await access(script, constants.X_OK);
+    const result = spawnSync(fileURLToPath(script), [scenario.fixture.scenario], { encoding: 'utf8' });
+    assert.equal(result.status, 0, result.stderr);
+    const fixturePath = resolve(result.stdout.trim());
+    assert.ok(fixturePath.startsWith(`${resolve(tmpdir())}/proofcheck-eval.`));
+    await access(`${fixturePath}/.proofcheck-eval-root`);
+    await rm(fixturePath, { recursive: true });
   }
 });

@@ -69,8 +69,8 @@ async function rejectMutations(mutations) {
 async function rejectMutation(path, mutate) { await rejectMutations([[path, mutate]]); }
 
 test('repository metadata validator rejects inconsistent package identity', async () => {
-  await rejectMutation('package-lock.json', (source) => source.replace('"version": "0.1.0"', '"version": "9.9.9"'));
-  await rejectMutation('CITATION.cff', (source) => source.replace('version: 0.1.0', 'version: 9.9.9'));
+  await rejectMutation('package-lock.json', (source) => source.replace('"version": "0.1.1"', '"version": "9.9.9"'));
+  await rejectMutation('CITATION.cff', (source) => source.replace('version: 0.1.1', 'version: 9.9.9'));
   await rejectMutation('CITATION.cff', (source) => source.replace('github.com/Kyaa-A/proofcheck', 'github.com/other/proofcheck'));
   await rejectMutation('.claude-plugin/marketplace.json', (source) => source.replace('"plugins": [\n    {\n      "name": "proofcheck"', '"plugins": [\n    {\n      "name": "other"'));
   await rejectMutation('.claude-plugin/marketplace.json', (source) => {
@@ -105,5 +105,5 @@ test('repository metadata validator requires explicit Codex hook fallbacks', asy
 
 test('repository metadata validator rejects SemVer leading zeros', async () => {
   const paths = ['package.json', 'package-lock.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json', '.codex-plugin/plugin.json', '.agents/plugins/marketplace.json', 'CITATION.cff'];
-  await rejectMutations(paths.map((path) => [path, (source) => source.replaceAll('0.1.0', '01.1.3')]));
+  await rejectMutations(paths.map((path) => [path, (source) => source.replaceAll('0.1.1', '01.1.1')]));
 });

@@ -3,7 +3,7 @@ message: "If you use proofcheck, please cite it using this metadata."
 title: proofcheck
 abstract: "A report-only verification skill for Claude Code and Codex."
 type: software
-version: 0.1.0
+version: 0.1.1
 authors:
   - family-names: Pacalna
     given-names: Asnari
