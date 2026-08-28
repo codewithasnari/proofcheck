@@ -1,0 +1,28 @@
+{
+  "name": "proofcheck",
+  "version": "0.1.0",
+  "description": "Verify completion claims with fresh, scoped evidence without changing the project.",
+  "author": {
+    "name": "Asnari Pacalna",
+    "url": "https://github.com/Kyaa-A"
+  },
+  "homepage": "https://github.com/Kyaa-A/proofcheck",
+  "repository": "https://github.com/Kyaa-A/proofcheck",
+  "license": "MIT",
+  "keywords": ["proofcheck", "verification", "testing", "readiness", "evidence"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Proofcheck",
+    "shortDescription": "Verify completion with fresh evidence",
+    "longDescription": "Run scoped project checks and report auditable readiness evidence without editing or shipping anything.",
+    "developerName": "Asnari Pacalna",
+    "category": "Productivity",
+    "capabilities": ["Skills"],
+    "websiteURL": "https://github.com/Kyaa-A/proofcheck",
+    "defaultPrompt": [
+      "Verify whether this work is ready.",
+      "Run the relevant checks and report the evidence.",
+      "Proofcheck this fix without changing anything."
+    ]
+  }
+}

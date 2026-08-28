@@ -1,0 +1,22 @@
+{
+  "name": "proofcheck",
+  "owner": {
+    "name": "Asnari Pacalna",
+    "email": "asnaripacalna@gmail.com"
+  },
+  "description": "Marketplace for the Proofcheck verification skill.",
+  "plugins": [
+    {
+      "name": "proofcheck",
+      "version": "0.1.0",
+      "source": "./",
+      "description": "Verify completion claims with fresh, scoped evidence without changing the project.",
+      "author": { "name": "Asnari Pacalna" },
+      "homepage": "https://github.com/Kyaa-A/proofcheck",
+      "repository": "https://github.com/Kyaa-A/proofcheck",
+      "license": "MIT",
+      "keywords": ["proofcheck", "verification", "testing", "readiness", "evidence"],
+      "category": "development"
+    }
+  ]
+}

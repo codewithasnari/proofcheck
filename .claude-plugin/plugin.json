@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "proofcheck",
+  "description": "Verify completion claims with fresh, scoped evidence without changing the project.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Asnari Pacalna",
+    "url": "https://github.com/Kyaa-A"
+  },
+  "homepage": "https://github.com/Kyaa-A/proofcheck",
+  "repository": "https://github.com/Kyaa-A/proofcheck",
+  "license": "MIT",
+  "keywords": ["proofcheck", "verification", "testing", "readiness", "evidence", "claude-code", "codex"]
+}

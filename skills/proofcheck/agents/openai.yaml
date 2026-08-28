@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proofcheck"
+  short_description: "Verify completion claims with fresh evidence"
+  default_prompt: "Verify this work and report only evidence-backed results."

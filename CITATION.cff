@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use proofcheck, please cite it using this metadata."
+title: proofcheck
+abstract: "A report-only verification skill for Claude Code and Codex."
+type: software
+version: 0.1.0
+authors:
+  - family-names: Pacalna
+    given-names: Asnari
+repository-code: "https://github.com/Kyaa-A/proofcheck"
+url: "https://github.com/Kyaa-A/proofcheck"
+license: MIT
+date-released: 2026-08-27
