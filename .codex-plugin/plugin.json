@@ -4,10 +4,10 @@
   "description": "Verify completion claims with fresh, scoped evidence without changing the project.",
   "author": {
     "name": "Asnari Pacalna",
-    "url": "https://github.com/Kyaa-A"
+    "url": "https://github.com/codewithasnari"
   },
-  "homepage": "https://github.com/Kyaa-A/proofcheck",
-  "repository": "https://github.com/Kyaa-A/proofcheck",
+  "homepage": "https://github.com/codewithasnari/proofcheck",
+  "repository": "https://github.com/codewithasnari/proofcheck",
   "license": "MIT",
   "keywords": ["proofcheck", "verification", "testing", "readiness", "evidence"],
   "skills": "./skills/",
@@ -18,7 +18,7 @@
     "developerName": "Asnari Pacalna",
     "category": "Productivity",
     "capabilities": ["Skills"],
-    "websiteURL": "https://github.com/Kyaa-A/proofcheck",
+    "websiteURL": "https://github.com/codewithasnari/proofcheck",
     "defaultPrompt": [
       "Verify whether this work is ready.",
       "Run the relevant checks and report the evidence.",

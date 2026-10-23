@@ -7,7 +7,7 @@ version: 0.1.1
 authors:
   - family-names: Pacalna
     given-names: Asnari
-repository-code: "https://github.com/Kyaa-A/proofcheck"
-url: "https://github.com/Kyaa-A/proofcheck"
+repository-code: "https://github.com/codewithasnari/proofcheck"
+url: "https://github.com/codewithasnari/proofcheck"
 license: MIT
 date-released: 2026-08-27

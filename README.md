@@ -22,14 +22,14 @@ The product is Markdown-first. `skills/proofcheck/SKILL.md` defines the boundary
 ### Claude Code
 
 ```text
-/plugin marketplace add Kyaa-A/proofcheck
+/plugin marketplace add codewithasnari/proofcheck
 /plugin install proofcheck@proofcheck
 ```
 
 ### Codex
 
 ```bash
-codex plugin marketplace add Kyaa-A/proofcheck
+codex plugin marketplace add codewithasnari/proofcheck
 codex plugin add proofcheck@proofcheck
 ```
 

@@ -7,14 +7,14 @@ import { join } from 'node:path';
 const CONFIG = {
   claude: {
     manifest: '.claude-plugin/plugin.json',
-    remote: 'https://raw.githubusercontent.com/Kyaa-A/proofcheck/main/.claude-plugin/plugin.json',
+    remote: 'https://raw.githubusercontent.com/codewithasnari/proofcheck/main/.claude-plugin/plugin.json',
     message(installed, latest) {
       return `proofcheck ${installed} -> ${latest} update available\nRun:\n  claude plugin marketplace update proofcheck\n  claude plugin update proofcheck@proofcheck\nThen restart Claude Code or run /reload-plugins.`;
     },
   },
   codex: {
     manifest: '.codex-plugin/plugin.json',
-    remote: 'https://raw.githubusercontent.com/Kyaa-A/proofcheck/main/.codex-plugin/plugin.json',
+    remote: 'https://raw.githubusercontent.com/codewithasnari/proofcheck/main/.codex-plugin/plugin.json',
     message(installed, latest) {
       return `proofcheck ${installed} -> ${latest} update available\nRun:\n  codex plugin marketplace upgrade proofcheck\n  codex plugin remove proofcheck@proofcheck\n  codex plugin add proofcheck@proofcheck\nThen start a new Codex session.`;
     },

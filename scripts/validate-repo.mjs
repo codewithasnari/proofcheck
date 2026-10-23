@@ -47,8 +47,8 @@ assert.equal(hook.hooks[0].statusMessage, 'Checking proofcheck version');
 const citation = await readFile(new URL('../CITATION.cff', import.meta.url), 'utf8');
 assert.match(citation, /^title: proofcheck$/m);
 assert.match(citation, new RegExp(`^version: ${version.replaceAll('.', '\\.')}$`, 'm'));
-assert.match(citation, /^repository-code: "https:\/\/github\.com\/Kyaa-A\/proofcheck"$/m);
-assert.match(citation, /^url: "https:\/\/github\.com\/Kyaa-A\/proofcheck"$/m);
+assert.match(citation, /^repository-code: "https:\/\/github\.com\/codewithasnari\/proofcheck"$/m);
+assert.match(citation, /^url: "https:\/\/github\.com\/codewithasnari\/proofcheck"$/m);
 
 const skill = await readFile(new URL('../skills/proofcheck/SKILL.md', import.meta.url), 'utf8');
 const frontmatter = skill.match(/^---\n([\s\S]+?)\n---\n/);

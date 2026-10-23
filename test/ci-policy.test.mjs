@@ -71,7 +71,7 @@ async function rejectMutation(path, mutate) { await rejectMutations([[path, muta
 test('repository metadata validator rejects inconsistent package identity', async () => {
   await rejectMutation('package-lock.json', (source) => source.replace('"version": "0.1.1"', '"version": "9.9.9"'));
   await rejectMutation('CITATION.cff', (source) => source.replace('version: 0.1.1', 'version: 9.9.9'));
-  await rejectMutation('CITATION.cff', (source) => source.replace('github.com/Kyaa-A/proofcheck', 'github.com/other/proofcheck'));
+  await rejectMutation('CITATION.cff', (source) => source.replace('github.com/codewithasnari/proofcheck', 'github.com/other/proofcheck'));
   await rejectMutation('.claude-plugin/marketplace.json', (source) => source.replace('"plugins": [\n    {\n      "name": "proofcheck"', '"plugins": [\n    {\n      "name": "other"'));
   await rejectMutation('.claude-plugin/marketplace.json', (source) => {
     const document = JSON.parse(source);

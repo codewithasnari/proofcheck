@@ -5,10 +5,10 @@
   "version": "0.1.1",
   "author": {
     "name": "Asnari Pacalna",
-    "url": "https://github.com/Kyaa-A"
+    "url": "https://github.com/codewithasnari"
   },
-  "homepage": "https://github.com/Kyaa-A/proofcheck",
-  "repository": "https://github.com/Kyaa-A/proofcheck",
+  "homepage": "https://github.com/codewithasnari/proofcheck",
+  "repository": "https://github.com/codewithasnari/proofcheck",
   "license": "MIT",
   "keywords": ["proofcheck", "verification", "testing", "readiness", "evidence", "claude-code", "codex"]
 }
